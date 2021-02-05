@@ -17,18 +17,18 @@ def div(number1,number2):
 def menu():
   run = 'y'
   while run in ["y","yes"]:
-    number1 = int(input("\nEnter 1st value\n--> "))
-    number2 = int(input("Enter 2nd value\n--> "))
-    print("\nChoose the action you would like to perform")
-    print("\t[1] Add\n\t[2] Subtract\n\t[3] Multiply\n\t[4] Divide")
-    option = int(input("\n--> "))
-    if option == 1:
+    number1 = int(input("\nEnter 1st number --> "))
+    number2 = int(input("Enter 2nd value --> "))
+    print("\nChoose the operation you would like to perform")
+    print("\t[+] Add\n\t[-] Subtract\n\t[x] Multiply\n\t[/] Divide")
+    option = input("\n--> ")
+    if option == '+':
       print(add(number1,number2))
-    elif option == 2:
+    elif option == '-':
       print(sub(number1,number2))
-    elif option == 3:
+    elif option == 'x':
       print(mul(number1,number2))
-    elif option == 4:
+    elif option == '/':
       print(div(number1,number2))
     else:
       None
