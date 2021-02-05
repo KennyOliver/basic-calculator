@@ -1,35 +1,48 @@
-def add(number1,number2):
-  result = number1 + number2
+def add(num1,num2):
+  result = num1 + num2
   return result
 
-def sub(number1,number2):
-  result = number1 - number2
+def sub(num1,num2):
+  result = num1 - num2
   return result
 
-def mul(number1,number2):
-  result = number1 * number2
+def mul(num1,num2):
+  result = num1 * num2
   return result
 
-def div(number1,number2):
-  result = number1 / number2
+def div(num1,num2):
+  result = num1 / num2
   return result
-#====================
+
+def rmd(num1,num2):
+  divide = num1 // num2
+  remainder = num1 % num2
+  return ("Integer division:\t%s\nRemainder:\t%s" % (divide,remainder))
+
+def pwr(num1,num2):
+  result = num1 ** num2
+  return result
+#==============================
 def menu():
   run = 'y'
   while run in ["y","yes"]:
-    number1 = int(input("\nEnter 1st number --> "))
-    number2 = int(input("Enter 2nd value --> "))
+    num1 = int(input("\nEnter 1st number --> "))
+    num2 = int(input("Enter 2nd number --> "))
     print("\nChoose the operation you would like to perform")
-    print("\t[+] Add\n\t[-] Subtract\n\t[x] Multiply\n\t[/] Divide")
+    print("\t[+] Add\n\t[-] Subtract\n\t[x] Multiply\n\t[/] Divide\n\t[**] Power\n\t[//%] Integer Divison & Remainder")
     option = input("\n--> ")
     if option == '+':
-      print(add(number1,number2))
+      print(add(num1,num2))
     elif option == '-':
-      print(sub(number1,number2))
+      print(sub(num1,num2))
     elif option == 'x':
-      print(mul(number1,number2))
+      print(mul(num1,num2))
     elif option == '/':
-      print(div(number1,number2))
+      print(div(num1,num2))
+    elif option == '//%':
+      print(rmd(num1,num2))
+    elif option == '^':
+      print(pwr(num1,num2))
     else:
       None
     
