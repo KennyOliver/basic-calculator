@@ -17,10 +17,10 @@ def div(number1,number2):
 def menu():
   run = 'y'
   while run in ["y","yes"]:
-    number1 = int(input("Enter 1st value\n--> "))
+    number1 = int(input("\nEnter 1st value\n--> "))
     number2 = int(input("Enter 2nd value\n--> "))
-    print("Choose the action you would like to perform")
-    print("[1] Add\n[2] Subtract\n[3] Multiply\n[4] Divide")
+    print("\nChoose the action you would like to perform")
+    print("\t[1] Add\n\t[2] Subtract\n\t[3] Multiply\n\t[4] Divide")
     option = int(input("\n--> "))
     if option == 1:
       print(add(number1,number2))
@@ -30,11 +30,13 @@ def menu():
       print(mul(number1,number2))
     elif option == 4:
       print(div(number1,number2))
+    else:
+      None
     
-    print("Would you like to continue using Basic Calculator?")
-    print("[Y] Yes\n[N] No")
+    print("\nWould you like to continue using Basic Calculator?")
+    print("\t[Y] Yes\n\t[N] No")
     run = input("\n--> ").lower()
 
 # main program
-print("Welcome to Basic Calculator!")
+print("\nWelcome to Basic Calculator!")
 menu()
