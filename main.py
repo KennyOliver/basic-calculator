@@ -17,8 +17,8 @@ def div(number1,number2):
 def menu():
   run = 'True'
   while run == 'True':
-    number1 = input("Enter 1st value\n--> ")
-    number2 = input("Enter 2nd value\n--> ")
+    number1 = int(input("Enter 1st value\n--> "))
+    number2 = int(input("Enter 2nd value\n--> "))
     print("Choose the action you would like to perform")
     print("[1] Add\n[2] Subtract\n[3] Multiply\n[4] Divide")
     option = int(input("\n--> "))
